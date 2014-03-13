@@ -10,8 +10,7 @@
     excludes = ~/.gitignore
 [diff]
     tool = vimdiff
-[push]
-    default = simple
+    default = matching
 [alias]
     l = log --color --graph
 
