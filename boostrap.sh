@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # put dotfiles into home directory
-mv ~/dotfiles/.Xresources ~/.Xresources
-mv ~/dotfiles/.vimrc ~/.vimrc
-mv ~/dotfiles/.gitignore ~/.gitignore
-mv ~/dotfiles/.gitconfig ~/.gitconfig
+cp ~/dotfiles/.Xresources ~/.Xresources
+cp ~/dotfiles/.vimrc ~/.vimrc
+cp ~/dotfiles/.gitignore ~/.gitignore
+cp ~/dotfiles/.gitconfig ~/.gitconfig
+cp ~/dotfiles/.xinitrc ~/.xinitrc
 
 # get vundle and install
 if [ ! -d "~/.vim/bundle" ]; then
