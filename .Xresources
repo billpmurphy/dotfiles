@@ -8,10 +8,10 @@ URxvt*scrollBar_right: false
 URxvt*scrollBar_floating: false
 
 ! font
-URxvt*font: xft:Monospace:pixelsize=12
-URxvt*italicFont: xft:Monospace:italic:pixelsize=12
-URxvt*boldFont: xft:Monospace:bold:pixelsize=12
-URxvt*boldItalic:Font: xft:Monospace:italic:bold:pixelsize=12
+URxvt*font: xft:terminus:pixelsize=15
+URxvt*italicFont: xft:terminus:italic:pixelsize=15
+URxvt*boldFont: xft:terminus:bold:pixelsize=15
+URxvt*boldItalic:Font: xft:terminus:italic:bold:pixelsize=15
 URxvt*letterSpace: -1
 
 ! color scheme
