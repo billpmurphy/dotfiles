@@ -8,11 +8,15 @@ URxvt*scrollBar_right: false
 URxvt*scrollBar_floating: false
 
 ! font
-URxvt*font: xft:terminus:pixelsize=15
-URxvt*italicFont: xft:terminus:italic:pixelsize=15
-URxvt*boldFont: xft:terminus:bold:pixelsize=15
-URxvt*boldItalic:Font: xft:terminus:italic:bold:pixelsize=15
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
+URxvt*italicFont: xft:DejaVu Sans Mono:italic:pixelsize=14:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=14:antialias=true:hinting=true
+URxvt*boldItalicFont: xft:DejaVu Sans Mono:italic:bold:pixelsize=14:antialias=true:hinting=true
 URxvt*letterSpace: -1
+
+! border
+URxvt.borderColor:        #eeeece
+URxvt.internalBorder: 1
 
 ! color scheme
 URxvt*background:         #2e3436

@@ -1,9 +1,24 @@
-" reassign mapleader
-let mapleader = ','
+" reassign nmapleader
+let nmapleader = ','
+
+" un-tab in insert mode
+imap <S-Tab> <Esc><<i
+
+" do something more interesting with arrow keys
+imap <up> <nop>
+imap <right> <nop>
+imap <down> <nop>
+imap <left> <nop>
+nmap <right> <nop>
+nmap <down> <nop>
+nmap <left> <<
+nmap <right> >>
+
+" save file as sudo even if vim is not running as root
+cmap w!! w !sudo tee > /dev/null %
 
 " vundle
 set rtp+=$HOME/.vim/bundle/vundle
-set nocompatible
 filetype off
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -50,11 +65,14 @@ filetype plugin indent on     " change indent behavior based on filetype
 set cul                       " highlight the current line
 set expandtab                 " turn tab characters into spaces
 set encoding=utf-8            " UTF-8 encoding everywhere
+set hlsearch                  " highlight all search matches
 set lazyredraw                " only redraw when we need to
+set nocompatible              " must be vim, not vi
 set noerrorbells              " no error bells
 set number                    " show line numbers
 set ruler                     " show line/character position numbers
 set shiftwidth=4              " redindent operators indent 4 spaces
+set showmode                  " show the current mode on the bottom bar
 set smartindent               " enable automagic C-style indentation
 set tabstop=4                 " every tab = 4 spaces
 set ttyfast                   " faster terminal connection

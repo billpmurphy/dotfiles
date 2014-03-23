@@ -6,6 +6,8 @@ cp ~/dotfiles/.vimrc ~/.vimrc
 cp ~/dotfiles/.gitignore ~/.gitignore
 cp ~/dotfiles/.gitconfig ~/.gitconfig
 cp ~/dotfiles/.xinitrc ~/.xinitrc
+cp ~/dotfiles/.bashrc ~/.bashrc
+cp ~/dotfiles/.profile ~/.profile
 
 # get vundle and install
 if [ ! -d "~/.vim/bundle" ]; then
