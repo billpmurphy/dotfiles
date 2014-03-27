@@ -7,11 +7,26 @@ case $- in
 esac
 
 HISTCONTROL=ignoreboth
-HISTSIZE=4000
-HISTFILESIZE=4000
+HISTSIZE=10000
+HISTFILESIZE=400000
 
 shopt -s histappend
 shopt -s checkwinsize
+
+############################ terminal prompt #############################
+
+case "$TERM" in
+    rxvt-unicode-256color) color_prompt=yes;;
+    xterm-color) color_prompt=yes;;
+esac
+
+# prompt: "user@hostname: /path/to/dir$ "
+if [ "$color_prompt" = yes ]; then
+    PS1="\[\033[01;32m\]\u\[\033[0m\]@\[\033[01;32m\]\h"
+    PS1="$PS1\[\033[00m\]: \[\033[01;34m\]\w\[\033[00m\]\$ "
+else
+    PS1="\u@\h: \w\$ "
+fi
 
 ############################ useful functions ############################
 
@@ -54,6 +69,14 @@ function swap()
 }
 
 ############################ other utilities #############################
+
+# ls/tree colors
+if [ -f /usr/bin/dircolors ]; then
+    if [ -f ~/.dircolors ]; then
+        eval "`dircolors -b ~/.dircolors`"
+    fi
+    export LS_OPTIONS='--color=auto'
+fi
 
 # if we are not in posix mode, try to enable tab completion
 if ! shopt -oq posix; then
