@@ -91,20 +91,20 @@ CAPABILITY 30;41 # file with capability
 STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
 OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
 STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
-EXEC 00;32 # This is for files with execute permission:
+EXEC 00;92 # This is for files with execute permission:
 
 # List any file extensions like '.gz' or '.tar' that you would like ls
 # to colorize below. Put the extension, a space, and the color init string.
 # (and any comments you want to add after a '#')
 
 # executables (green)
-.cmd 00;32
-.exe 00;32
-.com 00;32
-.btm 00;32
-.bat 00;32
-.sh 00;32
-.csh 00;32
+.cmd 00;92
+.exe 00;92
+.com 00;92
+.btm 00;92
+.bat 00;92
+.sh 00;92
+.csh 00;92
 
 # bytecode/object/compilation files or swap files (light purple)
 .pyc 00;35

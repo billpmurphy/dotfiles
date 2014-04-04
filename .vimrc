@@ -9,7 +9,7 @@ imap <up> <nop>
 imap <right> <nop>
 imap <down> <nop>
 imap <left> <nop>
-nmap <right> <nop>
+nmap <up> <nop>
 nmap <down> <nop>
 nmap <left> <<
 nmap <right> >>
