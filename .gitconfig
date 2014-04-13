@@ -12,5 +12,5 @@
     tool = vimdiff
     default = matching
 [alias]
-    l = log --color --graph
-
+    l = log --all --graph --decorate --oneline --abbrev-commit
+    st = status -sb

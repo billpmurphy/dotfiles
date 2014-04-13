@@ -12,11 +12,13 @@
 *.7z
 *.7za
 *.dmg
+*.hg
 *.gz
 *.jar
 *.log
 *.rar
 *.sql
+*.svn
 *.tar
 *.zip
 
