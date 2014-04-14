@@ -41,6 +41,8 @@ let g:syntastic_check_on_wq = 0
 Bundle 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep='>'
+let g:airline_right_sep='<'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme = 'monochrome'
 
@@ -59,24 +61,32 @@ endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " vim general
-syntax on                     " syntax highlighting on
-filetype plugin indent on     " change indent behavior based on filetype
-set autoread                  " reread a file if changed from the outside
-set cul                       " highlight the current line
-set expandtab                 " turn tab characters into spaces
-set encoding=utf-8            " UTF-8 encoding everywhere
-set ffs=unix,dos,mac          " Unix is standard filetype
-set hlsearch                  " highlight all search matches
-set incsearch                 " start searching immediately
-set lazyredraw                " only redraw when we need to
-set nocompatible              " must be vim, not vi
-set noerrorbells              " no error bells
-set number                    " show line numbers
-set ruler                     " show line/character position numbers
-set shiftwidth=4              " redindent operators indent 4 spaces
-set showmode                  " show the current mode on the bottom bar
-set smartindent               " enable automagic C-style indentation
-set tabstop=4                 " every tab = 4 spaces
+syntax on                      " syntax highlighting on
+filetype plugin indent on      " change indent behavior based on filetype
+set autoread                   " reread a file if changed from the outside
+set backspace=indent,eol,start " backspace through anything
+set cul                        " highlight the current line
+set expandtab                  " turn tab characters into spaces
+set encoding=utf-8             " UTF-8 encoding everywhere
+set ffs=unix,dos,mac           " Unix is standard filetype
+set guioptions-=r              " disable scrollbar
+set guioptions-=R              " disable scrollbar
+set guioptions-=l              " disable scrollbar
+set guioptions-=L              " disable scrollbar
+set hlsearch                   " highlight all search matches
+set incsearch                  " start searching immediately
+set laststatus=2               " better bottom bar
+set lazyredraw                 " only redraw when we need to
+set nocompatible               " must be vim, not vi
+set noerrorbells               " no error bells
+set number                     " show line numbers
+set ruler                      " show line/character position numbers
+set shiftround                 " when indenting, round things off if uneven
+set shiftwidth=4               " redindent operators indent 4 spaces
+set showcmd                    " show info about the current command
+set showmode                   " show the current mode on the bottom bar
+set smartindent                " enable automagic C-style indentation
+set tabstop=4                  " every tab = 4 spaces
 set ttyfast                   " faster terminal connection
 set wildmenu                  " better commandline completion
 set wildmode=longest,full     " better-looking wildmenu
