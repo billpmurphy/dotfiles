@@ -41,8 +41,8 @@ let g:syntastic_check_on_wq = 0
 Bundle 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep='>'
-let g:airline_right_sep='<'
+let g:airline_left_sep='|'
+let g:airline_right_sep='|'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme = 'monochrome'
 
@@ -87,6 +87,6 @@ set showcmd                    " show info about the current command
 set showmode                   " show the current mode on the bottom bar
 set smartindent                " enable automagic C-style indentation
 set tabstop=4                  " every tab = 4 spaces
-set ttyfast                   " faster terminal connection
-set wildmenu                  " better commandline completion
-set wildmode=longest,full     " better-looking wildmenu
+set ttyfast                    " faster terminal connection
+set wildmenu                   " better commandline completion
+set wildmode=longest,full      " better-looking wildmenu
