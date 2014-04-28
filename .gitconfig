@@ -1,8 +1,6 @@
-[user]
-    name = billpmurphy
-    email = billpmurphy92@gmail.com
-[github]
-    user = billpmurphy
+[alias]
+    l = log --all --graph --decorate --oneline --abbrev-commit
+    st = status -sb
 [color]
     ui = auto
 [core]
@@ -11,6 +9,10 @@
 [diff]
     tool = vimdiff
     default = matching
-[alias]
-    l = log --all --graph --decorate --oneline --abbrev-commit
-    st = status -sb
+[github]
+    user = billpmurphy
+[push]
+    default = simple
+[user]
+    name = billpmurphy
+    email = billpmurphy92@gmail.com
