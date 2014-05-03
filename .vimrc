@@ -1,5 +1,8 @@
-" reassign nmapleader
-let nmapleader = ','
+filetype off
+filetype plugin indent off
+
+" reassign mapleader
+let mapleader = ','
 
 " un-tab in insert mode
 imap <S-Tab> <Esc><<i
@@ -19,7 +22,6 @@ cmap w!! w !sudo tee > /dev/null %
 
 " vundle
 set rtp+=$HOME/.vim/bundle/vundle
-filetype off
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
@@ -28,6 +30,16 @@ let g:rehash256 = 1
 Bundle 'tomasr/molokai'
 set t_Co=256
 colorscheme molokai
+
+" languages
+Bundle 'klen/python-mode'
+au BufWinEnter *.py normal zR
+
+Bundle 'tpope/vim-markdown'
+au BufRead,BufNewFile *.md set filetype=markdown
+
+Bundle 'jnwhiteh/vim-golang'
+autocmd BufWritePre *.go :silent Fmt
 
 " syntastic
 Bundle 'scrooloose/syntastic'
