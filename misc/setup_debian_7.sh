@@ -8,7 +8,7 @@ if [ $XSTATUS -eq 0 ]; then
     sudo apt-get install x-window-system-core
 fi
 
-git clone https://github.com/billpmurphy/dotfiles.git ~/dotfiles && \
+git clone http://github.com/billpmurphy/dotfiles.git ~/dotfiles && \
 ./dotfiles/boostrap.sh
 
 sudo apt-get install dwm suckless-tools libx11-dev libxinerama-dev && \

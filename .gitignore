@@ -1,29 +1,31 @@
 # compiled files
-
 *.class
+*.com
 *.dll
 *.exe
 *.o
 *.pyc
-*.swp
+*.so
 
 # dbs, logs, archives, etc
-
+*~
 *.7z
 *.7za
 *.dmg
 *.hg
+*.iso
 *.gz
 *.jar
 *.log
 *.rar
 *.sql
 *.svn
+*.swp
 *.tar
 *.zip
 
 # OSX-related
-
 Icon
+Icon?
 .DS_Store
 .DS_Store?

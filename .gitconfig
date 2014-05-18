@@ -5,14 +5,11 @@
     ui = auto
 [core]
     editor = vim
-    excludes = ~/.gitignore
+    excludesfile = ~/.gitignore
 [diff]
     tool = vimdiff
-    default = matching
 [github]
     user = billpmurphy
-[push]
-    default = simple
 [user]
     name = billpmurphy
     email = billpmurphy92@gmail.com
