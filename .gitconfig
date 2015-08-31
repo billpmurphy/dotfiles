@@ -1,6 +1,8 @@
-[alias]
-    l = log --all --graph --decorate --oneline --abbrev-commit
-    st = status -sb
+[user]
+	name = Bill Murphy
+	email = billpmurphy92@gmail.com
+[github]
+	user = billpmurphy
 [color]
     ui = auto
 [core]
@@ -8,8 +10,9 @@
     excludesfile = ~/.gitignore
 [diff]
     tool = vimdiff
-[github]
-    user = billpmurphy
-[user]
-    name = billpmurphy
-    email = billpmurphy92@gmail.com
+[alias]
+    last = log -l HEAD
+    l = log --all --graph --decorate --oneline --abbrev-commit
+    st = status -sb
+[push]
+	default = simple

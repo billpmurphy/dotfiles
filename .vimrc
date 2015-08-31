@@ -1,39 +1,55 @@
 filetype off
 filetype plugin indent off
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" key bindings
+
 " reassign mapleader
 let mapleader = ','
 
 " un-tab in insert mode
 imap <S-Tab> <Esc><<i
 
-" do something more interesting with arrow keys
+" arrow keys can be used for indenting/unindenting
 imap <up> <nop>
 imap <right> <nop>
 imap <down> <nop>
 imap <left> <nop>
-nmap <up> <nop>
-nmap <down> <nop>
+nmap <up> ddkP
+nmap <down> ddp
 nmap <left> <<
 nmap <right> >>
 
 " save file as sudo even if vim is not running as root
 cmap w!! w !sudo tee > /dev/null %
 
+" common typos
+cmap W w
+cmap Q q
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle
 set rtp+=$HOME/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colors
 let g:rehash256 = 1
 Bundle 'tomasr/molokai'
 set t_Co=256
 colorscheme molokai
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " languages
-Bundle 'klen/python-mode'
-au BufWinEnter *.py normal zR
+
+"Bundle 'klen/python-mode'
+"au BufWinEnter *.py normal zR
+
+au BufNewFile,BufRead *.html set filetype=htmldjango
 
 Bundle 'tpope/vim-markdown'
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -58,6 +74,9 @@ let g:airline_right_sep='|'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme = 'monochrome'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" functions
+
 " strip trailing whitespace on save
 function! <SID>StripTrailingWhitespaces()
     " preparation: save last search, and cursor position.
@@ -72,6 +91,8 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim general
 syntax on                      " syntax highlighting on
 filetype plugin indent on      " change indent behavior based on filetype
@@ -91,6 +112,7 @@ set laststatus=2               " better bottom bar
 set lazyredraw                 " only redraw when we need to
 set nocompatible               " must be vim, not vi
 set noerrorbells               " no error bells
+set nofoldenable               " no folds
 set number                     " show line numbers
 set ruler                      " show line/character position numbers
 set shiftround                 " when indenting, round things off if uneven
