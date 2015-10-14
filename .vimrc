@@ -57,6 +57,9 @@ au BufRead,BufNewFile *.md set filetype=markdown
 Bundle 'jnwhiteh/vim-golang'
 autocmd BufWritePre *.go :silent Fmt
 
+Bundle 'rust-lang/rust.vim'
+Bundle 'cespare/vim-toml'
+
 " syntastic
 Bundle 'scrooloose/syntastic'
 au FileType qf setlocal wrap linebreak
