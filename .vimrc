@@ -26,6 +26,7 @@ cmap w!! w !sudo tee > /dev/null %
 " common typos
 cmap W w
 cmap Q q
+cmap B b
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
